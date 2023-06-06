@@ -46,7 +46,7 @@
           <tr
             v-for="doctor in filteredData"
             :key="doctor.id"
-            @click="handleSelectItem(doctor.addressCityState)"
+            @click="handleSelectItem(doctor.lastName, doctor.firstName)"
           >
             <td
               v-for="columnKey in displayedColumns"
@@ -109,8 +109,8 @@ const handleInput = (e: Event) => {
   isSelected.value = false;
 };
 
-const handleSelectItem = (addressCityState: string) => {
-  lookupValue.value = addressCityState;
+const handleSelectItem = (lastName: string, firstName: string) => {
+  lookupValue.value = lastName+", "+firstName;
   isSelected.value = true;
 };
 
