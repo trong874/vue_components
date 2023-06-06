@@ -5,6 +5,8 @@ import {
   State,
   HeaderItem,
   Country,
+  Doctor,
+  DoctorHeader,
 } from "@/types/dataTypes";
 
 const OWALookupData: Array<OWAItem> = [
@@ -211,4 +213,84 @@ const countries: Array<Country> = [
   },
 ];
 
-export { OWALookupData, facilities, fakeStateData, headers, countries };
+const doctors:Doctor[] = [
+  {
+    id: "00000312",
+    lastName: "Last",
+    firstName: "First",
+    npi: "NPI",
+    licenseNumber: "123",
+    specialty: "Doctor",
+    addressCityState: "address, city, state",
+  },
+  {
+    id: "00000313",
+    lastName: "Last",
+    firstName: "First",
+    npi: "NPI",
+    licenseNumber: "123",
+    specialty: "Doctor",
+    addressCityState: "address, city, state",
+  },
+  {
+    id: "00000314",
+    lastName: "Last",
+    firstName: "First",
+    npi: "NPI",
+    licenseNumber: "123",
+    specialty: "Doctor",
+    addressCityState: "address, city, state",
+  },
+  {
+    id: "00000315",
+    lastName: "Last",
+    firstName: "First",
+    npi: "NPI",
+    licenseNumber: "123",
+    specialty: "Doctor",
+    addressCityState: "address, city, state",
+  },
+  {
+    id: "00000316",
+    lastName: "Last",
+    firstName: "First",
+    npi: "NPI",
+    licenseNumber: "123",
+    specialty: "Doctor",
+    addressCityState: "address, city, state",
+  },
+]
+
+
+const headersDoctor: Array<DoctorHeader> = [
+  {
+    id: uuid(),
+    name: "ID#",
+  },
+  {
+    id: uuid(),
+    name: "Last Name",
+  },
+  {
+    id: uuid(),
+    name: "First Name",
+  },
+  {
+    id: uuid(),
+    name: "NPI Code"
+  },
+  {
+    id: uuid(),
+    name: "License Number",
+  },
+  {
+    id: uuid(),
+    name: "Specialty",
+  },
+  {
+    id: uuid(),
+    name: "Address, City, State",
+  },
+];
+
+export { OWALookupData, facilities, fakeStateData, headers, countries, doctors, headersDoctor };
