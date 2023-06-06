@@ -36,3 +36,26 @@ export interface FacilityInput {
   type: string;
   cols: number;
 }
+
+export interface Doctor {
+  id: string | number;
+  lastName: string;
+  firstName: string;
+  npi: string;
+  licenseNumber: string;
+  specialty: string;
+  addressCityState: string;
+}
+
+export interface DoctorInput extends FacilityInput {
+  id: string | number;
+  label: string;
+  name: keyof Doctor;
+  type: string;
+  cols: number;
+}
+
+export interface DoctorHeader {
+  id: string;
+  name: string
+}
