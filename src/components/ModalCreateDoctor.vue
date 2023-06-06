@@ -75,7 +75,7 @@ import { Doctor } from "@/types/dataTypes";
 
 const showModal = ref(false);
 
-const INITIAL_VALUE_DOCTOR = {
+const data = ref<Doctor>({
   id: "",
   lastName: "",
   firstName: "",
@@ -83,12 +83,18 @@ const INITIAL_VALUE_DOCTOR = {
   licenseNumber: "",
   npi: "",
   specialty: ""
-}
-
-const data = ref<Doctor>(INITIAL_VALUE_DOCTOR);
+});
 
 const handleReset = () => {
-  data.value = INITIAL_VALUE_DOCTOR;
+  data.value = {
+    id: "",
+    lastName: "",
+    firstName: "",
+    addressCityState: "",
+    licenseNumber: "",
+    npi: "",
+    specialty: ""
+  };
 };
 
 const handleSubmit = () => {
