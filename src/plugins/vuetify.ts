@@ -6,7 +6,10 @@
 
 // Styles
 import "@mdi/font/css/materialdesignicons.css";
+import '@fortawesome/fontawesome-free/css/all.css' 
 import "vuetify/styles";
+import { aliases, fa } from 'vuetify/iconsets/fa'
+import { mdi } from 'vuetify/iconsets/mdi'
 
 // Composables
 import { createVuetify } from "vuetify";
@@ -27,6 +30,14 @@ export default createVuetify({
           on_lightorange: "#EDB42F",
         },
       },
+    },
+  },
+  icons: {
+    defaultSet: 'mdi',
+    aliases,
+    sets: {
+      fa,
+      mdi,
     },
   },
 });
