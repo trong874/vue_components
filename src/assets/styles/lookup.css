@@ -141,4 +141,8 @@
 .field-with-green-icon .v-icon {
 color: rgb(var(--v-theme-on_green));
 }
+
+.small-icon {
+   font-size: calc(var(--v-icon-size-multiplier) * 1.2em) !important
+}
   
