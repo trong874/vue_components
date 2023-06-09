@@ -10,6 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import "vuetify/styles";
 import { aliases, fa } from 'vuetify/iconsets/fa'
 import { mdi } from 'vuetify/iconsets/mdi'
+import { customIcons } from "./customIcons";
 
 // Composables
 import { createVuetify } from "vuetify";
@@ -38,6 +39,7 @@ export default createVuetify({
     sets: {
       fa,
       mdi,
+      custom: customIcons,
     },
   },
 });

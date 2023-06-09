@@ -3,7 +3,7 @@
     <template v-slot:activator>
       <v-btn
         @click="showModal = true"
-        icon="fa:fa-solid fa-plus small-icon"
+        icon="custom:rounded-add-icon"
         density="compact"
         color="#00695c"
         class="text-white ml-auto"
