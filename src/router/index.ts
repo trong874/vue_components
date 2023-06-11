@@ -9,6 +9,12 @@ const routes = [
     meta: { layout: 'MainLayout' },
   },
   {
+    path: '/race',
+    name: 'Race',
+    component: () => import(/* webpackChunkName: "home" */ '@/views/Race.vue'),
+    meta: { layout: 'MainLayout' },
+  },
+  {
     path: '/desktop-login',
     name: 'DesktopLogin',
     component: () => import(/* webpackChunkName: "desktoplogin" */ '@/views/DesktopLogin.vue'),
