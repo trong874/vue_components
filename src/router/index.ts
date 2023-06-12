@@ -15,6 +15,12 @@ const routes = [
     meta: { layout: 'MainLayout' },
   },
   {
+    path: '/class-suffix',
+    name: 'Class Suffix',
+    component: () => import(/* webpackChunkName: "home" */ '@/views/ClassSuffix.vue'),
+    meta: { layout: 'MainLayout' },
+  },
+  {
     path: '/desktop-login',
     name: 'DesktopLogin',
     component: () => import(/* webpackChunkName: "desktoplogin" */ '@/views/DesktopLogin.vue'),
