@@ -5,75 +5,79 @@
     >
     <v-row>
       <v-col>
-        <v-responsive class="me-auto" max-width="60%">
-          <v-text-field
-            type="text"
-            v-model="lookupValue"
-            placeholder="Enter lookup values"
-            ref="lookupInputRef"
-            variant="outlined"
-            :hide-details="true"
-            color="on_green"
-            @input="handleInput"
-          >
-            <template v-slot:append-inner>
-              <!-- modal -->
-              <Modal title="Facility" @on-submit="handleSubmit" />
-            </template>
-          </v-text-field>
-        </v-responsive>
+        <div class="me-auto table-dropdown-wrapper"> 
+          <v-responsive class="me-auto table-dropdown-wrapper" max-width="60%">
+            <v-text-field
+              type="text"
+              v-model="lookupValue"
+              placeholder="Enter lookup values"
+              ref="lookupInputRef"
+              variant="outlined"
+              :hide-details="true"
+              color="on_green"
+              @input="handleInput"
+            >
+              <template v-slot:append-inner>
+                <!-- modal -->
+                <Modal title="Facility" @on-submit="handleSubmit" />
+              </template>
+            </v-text-field>
+          </v-responsive>
+          <div class="table-dropdown">
+            <v-table
+              class="table-auto w-full rounded-t-lg mt-4 table-with-shadow"
+              v-if="lookupValue.length > 0 && !isSelected"
+            >
+              <thead class="bg-teal">
+                <tr>
+                  <th
+                    class="bg-grey-lighten-1 py-2 border text-left px-2"
+                    v-for="header in headers"
+                    :key="header.id"
+                  >
+                    {{ header.name }}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="facility in filteredData"
+                  :key="facility.id"
+                  v-if="filteredData.length > 0"
+                  @click="handleSelectItem(facility.stateCod,facility.hospitalName)"
+                >
+                  <td
+                    class="state-cod-text py-2 px-2 font-weight-bold border max-w-[197px] break-words"
+                  >
+                    {{ facility.stateCod }}
+                  </td>
+                  <td
+                    class="py-2 px-2 font-weight-medium border max-w-[580px] break-words"
+                  >
+                    {{ facility.hospitalName }}
+                  </td>
+                  <td
+                    class="py-2 px-2 font-weight-medium border max-w-[230px] break-words"
+                  >
+                    {{ facility.city }}
+                  </td>
+                  <td
+                    class="py-2 px-2 font-weight-medium border max-w-[123px] break-words"
+                  >
+                    {{ facility.state }}
+                  </td>
+                </tr>
+              </tbody>
+            </v-table>
+            <!-- no results -->
+            <div v-if="filteredData.length === 0 && !isSelected" class="no-result">
+              <span class="table-text">No result</span>
+            </div>
+          </div>
+        </div>
       </v-col>
     </v-row>
     <!-- dropdown -->
-    <v-table
-      class="table-auto w-full rounded-t-lg mt-4 table-with-shadow"
-      v-if="lookupValue.length > 0 && !isSelected"
-    >
-      <thead class="bg-teal">
-        <tr>
-          <th
-            class="bg-grey-lighten-1 py-2 border text-left px-2"
-            v-for="header in headers"
-            :key="header.id"
-          >
-            {{ header.name }}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          v-for="facility in filteredData"
-          :key="facility.id"
-          v-if="filteredData.length > 0"
-          @click="handleSelectItem(facility.stateCod,facility.hospitalName)"
-        >
-          <td
-            class="state-cod-text py-2 px-2 font-weight-bold border max-w-[197px] break-words"
-          >
-            {{ facility.stateCod }}
-          </td>
-          <td
-            class="py-2 px-2 font-weight-medium border max-w-[580px] break-words"
-          >
-            {{ facility.hospitalName }}
-          </td>
-          <td
-            class="py-2 px-2 font-weight-medium border max-w-[230px] break-words"
-          >
-            {{ facility.city }}
-          </td>
-          <td
-            class="py-2 px-2 font-weight-medium border max-w-[123px] break-words"
-          >
-            {{ facility.state }}
-          </td>
-        </tr>
-      </tbody>
-    </v-table>
-    <!-- no results -->
-    <div v-if="filteredData.length === 0 && !isSelected" class="no-result">
-      <span class="table-text">No result</span>
-    </div>
   </v-container>
 </template>
 

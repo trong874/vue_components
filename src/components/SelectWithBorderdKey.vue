@@ -18,10 +18,20 @@
         </template>
       </v-list-item>
     </template>
+    <template v-for="slot in parentSlots" #[slot]>
+      <slot :name="slot" />
+    </template>
   </v-autocomplete>
 </template>
 <script lang="ts">
+import { computed } from 'vue';
+
   export default {
-    inheritAttrs: false
+    inheritAttrs: false,
+    setup(props, ctx) {
+      const parentSlots = computed(() => Object.keys(ctx.slots))
+
+      return { parentSlots }
+    }  
   }
 </script>
