@@ -9,7 +9,6 @@
           <v-autocomplete
             single-line
             variant="outlined"
-            density="compact"
             color="on_green"
             placeholder="Please Select"
             class="field-with-green-icon" 
@@ -27,20 +26,12 @@
 
 const testItems = [
   {
-    title: "(g) - Get started with Vuetify, the world’s most popular Vue.js framework for building feature rich, blazing fast applications.",
+    title: "(m) - Multiple synchronus tumors OR Multifocal tumor (differentiated and anaplastic thyroid only)",
     value: "1",
   },
   {
-    title: "(g) - Get started with Vuetify, the world’s most popular Vue.js framework for building feature rich, blazing fast applications.",
-    value: "2",
-  },
-  {
-    title: "(g) - Get started with Vuetify, the world’s most popular Vue.js framework for building feature rich, blazing fast applications.",
-    value: "3",
-  },
-  {
-    title: "(g) - Get started with Vuetify, the world’s most popular Vue.js framework for building feature rich, blazing fast applications.",
-    value: "4",
+    title: "(s) - Solitary tumor (differentiated and anaplastic thyroid only)",
+    value: "1",
   },
 ]
 

@@ -1,8 +1,8 @@
 <template>
-  <AgentSelect />
+  <AgentLookup />
 </template>
 
 <script setup lang="ts">
-import AgentSelect from "@/components/AgentSelect.vue";
+import AgentLookup from "@/components/AgentLookup.vue";
 
 </script>

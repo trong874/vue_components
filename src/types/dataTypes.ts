@@ -59,3 +59,13 @@ export interface DoctorHeader {
   id: string;
   name: string
 }
+
+export interface AgentHeader {
+  id: string;
+  name: string
+}
+
+export interface Agent {
+  code: string;
+  description: string
+}

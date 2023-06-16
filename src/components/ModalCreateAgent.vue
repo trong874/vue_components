@@ -5,7 +5,7 @@
         icon="custom:rounded-add-icon"
         density="compact"
         color="#00695c"
-        class="text-white ml-auto agent-activator"
+        class="text-white ml-auto"
         @click.prevent.stop="handleClickAdd"
       >
       </v-btn>

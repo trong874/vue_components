@@ -1,7 +1,6 @@
 <template>
   <v-autocomplete
     variant="outlined"
-    density="compact"
     color="on_green"
     placeholder="Please Select"
     class="field-with-green-icon"

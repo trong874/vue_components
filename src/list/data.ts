@@ -7,6 +7,8 @@ import {
   Country,
   Doctor,
   DoctorHeader,
+  AgentHeader,
+  Agent,
 } from "@/types/dataTypes";
 
 const OWALookupData: Array<OWAItem> = [
@@ -293,4 +295,18 @@ const headersDoctor: Array<DoctorHeader> = [
   },
 ];
 
-export { OWALookupData, facilities, fakeStateData, headers, countries, doctors, headersDoctor };
+
+const displayedColumnsAgent:(keyof Agent)[] = ["code", "description"]
+
+const headersAgentInfo: Record<(keyof Agent), { class: string, title: string }> = {
+  code: {
+    class: "code-cell",
+    title: "Code"
+  },
+  description: {
+    class: "description-cell",
+    title: "Description"
+  }
+}
+
+export { OWALookupData, facilities, fakeStateData, headers, countries, doctors, headersDoctor, headersAgentInfo, displayedColumnsAgent };
