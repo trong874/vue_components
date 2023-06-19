@@ -30,11 +30,11 @@
             <thead>
               <tr>
                 <th
-                  v-for="key in displayedColumnsAgent"
-                  :key="key"
-                  :class="headersAgentInfo[key].class"
+                  v-for="column in columnsAgent"
+                  :key="column.key"
+                  :class="column.class"
                 >
-                  {{ headersAgentInfo[key].title }}
+                  {{ column.title }}
                 </th>
               </tr>
             </thead>
@@ -47,11 +47,11 @@
                   @click="handleSelectItem(agent.code, agent.description)"
                 >
                   <td
-                    v-for="columnKey in displayedColumnsAgent"
-                    :key="columnKey"
-                    :class="headersAgentInfo[columnKey].class"
+                    v-for="column in columnsAgent"
+                    :key="column.key"
+                    :class="column.class"
                   >
-                    {{ agent[columnKey] }}
+                    {{ agent[column.key] }}
                   </td>
                 </tr>
               </template>
@@ -69,7 +69,7 @@
 
 <script setup lang="ts">
 import ModalCreateAgent from './ModalCreateAgent.vue';
-import { headersAgentInfo, displayedColumnsAgent } from '@/list/data';
+import { columnsAgent } from '@/list/data';
 import { Agent } from '@/types/dataTypes';
 import { ref } from 'vue';
 import { computed } from 'vue';
@@ -164,6 +164,5 @@ const filteredData = computed(() => {
     }
   );
 });
-
 
 </script>

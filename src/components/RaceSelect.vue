@@ -1,12 +1,30 @@
 <template>
   <v-container>
-    <v-label class="text-teal-darken-3 font-weight-bold custom-label mb-3">
+    <v-label class="lookup-label">
       Race
     </v-label>
     <v-row>
       <v-col>
-        <v-responsive class="me-auto" max-width="60%">
-          <select-with-borderd-key :items="testItems" />
+        <v-responsive class="text-field-wrapper">
+          <v-autocomplete
+            variant="outlined"
+            color="on_green"
+            placeholder="Please Select"
+            class="field-with-green-icon"
+            :hide-details="true"
+            append-inner-icon="mdi-chevron-down"
+            :items="races"
+          >
+            <template v-slot:item="{ item, props: itemProps }" >
+              <v-list-item v-bind="itemProps" class="option-with-bordered-index" border="0">
+                <template v-slot:prepend>
+                  <div class="index-item">
+                    {{ item.raw.key }}
+                  </div>
+                </template>
+              </v-list-item>
+            </template>
+          </v-autocomplete>
         </v-responsive>
       </v-col>
     </v-row>
@@ -14,29 +32,6 @@
 </template>
 
 <script setup lang="ts">
-import SelectWithBorderdKey from './SelectWithBorderdKey.vue';
-
-const testItems = [
-  {
-    title: "item 1",
-    value: "1",
-    key: "001"
-  },
-  {
-    title: "item 2",
-    value: "2",
-    key: "002"
-  },
-  {
-    title: "item 3",
-    value: "3",
-    key: "003"
-  },
-  {
-    title: "item 4",
-    value: "4",
-    key: "004"
-  },
-]
+import { races } from "@/list/data";
 
 </script>

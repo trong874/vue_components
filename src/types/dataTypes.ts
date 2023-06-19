@@ -4,7 +4,7 @@ export interface OWAItem {
 }
 
 export interface Facility {
-  [key: string]: any;
+  // [key: string]: any;
   id: string | number;
   stateCod: string;
   hospitalName: string;
@@ -68,4 +68,34 @@ export interface AgentHeader {
 export interface Agent {
   code: string;
   description: string
+}
+
+export interface Column {
+  key: string,
+  class: string,
+  title: string
+}
+
+export interface AgentColumn extends Column {
+  key: keyof Agent
+}
+
+export interface FacilityColumn extends Column {
+  key: keyof Facility
+}
+
+export interface Country {
+  id: string;
+  code: string;
+  name: string;
+}
+
+export interface DoctorColumn extends Column {
+  key: keyof Doctor;
+}
+
+export interface Race {
+  title: string,
+  value: string,
+  key: string,
 }

@@ -6,9 +6,11 @@ import {
   HeaderItem,
   Country,
   Doctor,
-  DoctorHeader,
-  AgentHeader,
   Agent,
+  AgentColumn,
+  FacilityColumn,
+  DoctorColumn,
+  Race,
 } from "@/types/dataTypes";
 
 const OWALookupData: Array<OWAItem> = [
@@ -263,50 +265,104 @@ const doctors:Doctor[] = [
   },
 ]
 
-
-const headersDoctor: Array<DoctorHeader> = [
+const columnsDoctor: DoctorColumn[] = [
   {
-    id: uuid(),
-    name: "ID#",
+    key: "id",
+    class: "id-cell",
+    title: "ID#"
   },
   {
-    id: uuid(),
-    name: "Last Name",
+    key: "lastName",
+    class: "last-name-cell",
+    title: "Last Name",
   },
   {
-    id: uuid(),
-    name: "First Name",
+    key: "firstName",
+    class: "first-name-cell",
+    title: "First Name",
   },
   {
-    id: uuid(),
-    name: "NPI Code"
+    key: "npi",
+    class: "npi-cell",
+    title: "NPI Code"
   },
   {
-    id: uuid(),
-    name: "License Number",
+    key: "licenseNumber",
+    class: "license-number-cell",
+    title: "License Number",
   },
   {
-    id: uuid(),
-    name: "Specialty",
+    key: "specialty",
+    class: "specialty-cell",
+    title: "Specialty",
   },
   {
-    id: uuid(),
-    name: "Address, City, State",
+    key: "addressCityState",
+    class: "address-city-state-cell",
+    title: "Address, City, State",
   },
-];
-
+]
 
 const displayedColumnsAgent:(keyof Agent)[] = ["code", "description"]
 
-const headersAgentInfo: Record<(keyof Agent), { class: string, title: string }> = {
-  code: {
+const columnsAgent: AgentColumn[] = [
+  {
+    key: "code",
     class: "code-cell",
-    title: "Code"
+    title: "Code",
   },
-  description: {
+  {
+    key: "description",
     class: "description-cell",
     title: "Description"
   }
-}
+]
 
-export { OWALookupData, facilities, fakeStateData, headers, countries, doctors, headersDoctor, headersAgentInfo, displayedColumnsAgent };
+const columnsFacility: FacilityColumn[] = [
+  {
+    key: "stateCod",
+    class: "state-cod-cell",
+    title: "State Cod"
+  },
+  {
+    key: "hospitalName",
+    class: "hospital-name-cell",
+    title: "Hospital Name",
+  },
+  {
+    key: "city",
+    class: "city-cell",
+    title: "City"
+  },
+  {
+    key: "state",
+    class: "state-cell",
+    title: "State"
+  },
+]
+
+
+const races:Race[] = [
+  {
+    title: "item 1",
+    value: "1",
+    key: "001"
+  },
+  {
+    title: "item 2",
+    value: "2",
+    key: "002"
+  },
+  {
+    title: "item 3",
+    value: "3",
+    key: "003"
+  },
+  {
+    title: "item 4",
+    value: "4",
+    key: "004"
+  },
+]
+
+export { OWALookupData, facilities, fakeStateData, headers, countries, doctors, columnsDoctor, columnsAgent, displayedColumnsAgent, columnsFacility, races };

@@ -2,7 +2,7 @@
   <div class="lookup-container">
     <v-container>
       <v-label
-        class="text-teal-darken-3 text-[10px] font-weight-bold custom-label"
+        class="lookup-label"
         text="Label for lookup"
       ></v-label>
       <v-text-field
@@ -19,7 +19,7 @@
       </v-text-field>
       <!-- dropdown -->
       <v-list
-        class="mt-2 rounded-lg py-0"
+        class="lookup-list"
         v-if="!isSelected && lookupValue.length > 0"
       >
         <v-list-item
@@ -32,7 +32,6 @@
           </template>
           <v-list-item-title
             v-text="item.description"
-            class="ml-5 font-weight-medium"
           ></v-list-item-title>
         </v-list-item>
         <!-- no result -->
@@ -62,13 +61,13 @@ const handleSelectItem = (id:string,selectedItem: string) => {
   isSelected.value = true;
 };
 
-const handleClear = () => {
-  if (lookupInput && lookupInput.value) {
-    lookupInput.value.focus();
-  }
-  isSelected.value = false;
-  lookupValue.value = "";
-};
+// const handleClear = () => {
+//   if (lookupInput && lookupInput.value) {
+//     lookupInput.value.focus();
+//   }
+//   isSelected.value = false;
+//   lookupValue.value = "";
+// };
 
 const filteredData = computed(() => {
   return OWALookupData.filter((item) =>
