@@ -257,6 +257,7 @@ color: rgb(var(--v-theme-on_green));
 .code-cell {
     width: 150px;
     min-width: 150px;
+    color: #009688
 }
 
 .description-cell {
@@ -267,6 +268,7 @@ color: rgb(var(--v-theme-on_green));
 .state-cod-cell {
     width: 150px;
     min-width: 150px;
+    color: #009688
 }
 
 .hospital-name-cell {
