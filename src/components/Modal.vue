@@ -1,20 +1,19 @@
 <template>
-  <v-dialog max-width="550px" v-model="showModal">
+  <v-dialog class="modal-add-item" max-width="550px" v-model="showModal">
     <template v-slot:activator="{ props }">
       <v-btn
         @click="showModal = true"
         icon="custom:rounded-add-icon"
         density="compact"
         color="#00695c"
-        class="text-white ml-auto"
       >
       </v-btn>
     </template>
     <v-card>
       <v-card-title
-        class="primary-background-color text-white text-h5 py-4 px-6"
+        class="modal-title"
       >
-        <span class="headline">{{ title }}</span>
+        {{ title }}
       </v-card-title>
 
       <v-card-text>
@@ -24,9 +23,9 @@
             v-for="(input, index) in facilityInputs"
             :key="index"
           >
-            <label class="custom-label primary-color font-weight-bold">{{
-              input.label
-            }}</label>
+            <label class="field-label">
+              {{ input.label }}
+            </label>
             <v-text-field
               v-if="input.type === 'text'"
               variant="outlined"
@@ -55,11 +54,11 @@
         </v-row>
       </v-card-text>
 
-      <v-card-actions class="justify-end px-6 py-4">
-        <v-btn @click="handleClose" class="border-primary custom-btn"
+      <v-card-actions class="modal-actions">
+        <v-btn @click="handleClose" class="button-cancel"
           >Cancel</v-btn
         >
-        <v-btn @click="handleSubmit()" class="bg-yellow-darken-2 custom-btn">
+        <v-btn @click="handleSubmit" class="button-confirm">
           Okay
         </v-btn>
       </v-card-actions>
