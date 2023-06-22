@@ -99,3 +99,8 @@ export interface Race {
   value: string,
   key: string,
 }
+
+export interface ClassSuffix {
+  title: string,
+  value: string,
+}

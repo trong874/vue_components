@@ -11,6 +11,7 @@ import {
   FacilityColumn,
   DoctorColumn,
   Race,
+  ClassSuffix,
 } from "@/types/dataTypes";
 
 const OWALookupData: Array<OWAItem> = [
@@ -365,4 +366,15 @@ const races:Race[] = [
   },
 ]
 
-export { OWALookupData, facilities, fakeStateData, headers, countries, doctors, columnsDoctor, columnsAgent, displayedColumnsAgent, columnsFacility, races };
+const classSuffixs: ClassSuffix[] = [
+  {
+    title: "(m) - Multiple synchronus tumors OR Multifocal tumor (differentiated and anaplastic thyroid only)",
+    value: "1",
+  },
+  {
+    title: "(s) - Solitary tumor (differentiated and anaplastic thyroid only)",
+    value: "2",
+  },
+]
+
+export { OWALookupData, facilities, fakeStateData, headers, countries, doctors, columnsDoctor, columnsAgent, displayedColumnsAgent, columnsFacility, races, classSuffixs };

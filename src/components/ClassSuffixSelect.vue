@@ -13,7 +13,7 @@
             placeholder="Please Select"
             class="field-with-green-icon" 
             append-inner-icon="mdi-chevron-down"
-            :items="testItems"
+            :items="classSuffixs"
           />
         </v-responsive>
       </v-col>
@@ -22,18 +22,7 @@
 </template>
 
 <script setup lang="ts">
-
-const testItems = [
-  {
-    title: "(m) - Multiple synchronus tumors OR Multifocal tumor (differentiated and anaplastic thyroid only)",
-    value: "1",
-  },
-  {
-    title: "(s) - Solitary tumor (differentiated and anaplastic thyroid only)",
-    value: "2",
-  },
-]
-
+import  { classSuffixs } from "@/list/data"
 </script>
 
 <style scoped lang="css">

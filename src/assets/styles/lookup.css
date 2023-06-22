@@ -289,6 +289,7 @@ color: rgb(var(--v-theme-on_green));
 .id-cell {
     width: 120px;
     min-width: 120px;
+    color: #009688
 }
 .last-name-cell {
     width: 120px;
