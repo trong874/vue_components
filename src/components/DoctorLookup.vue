@@ -47,11 +47,39 @@
                   @click="handleSelectItem(doctor.lastName, doctor.firstName)"
                 >
                   <td
-                    v-for="column in columnsDoctor"
-                    :key="column.key"
-                    :class="column.class"
+                    class="id-cell"
                   >
-                    {{ doctor[column.key] }}
+                    {{ doctor.id }}
+                  </td>
+                  <td
+                    class="last-name-cell"
+                  >
+                    {{ doctor.lastName }}
+                  </td>
+                  <td
+                    class="first-name-cell"
+                  >
+                    {{ doctor.firstName }}
+                  </td>
+                  <td
+                    class="npi-cell"
+                  >
+                    {{ doctor.npi }}
+                  </td>
+                  <td
+                    class="license-number-cell"
+                  >
+                    {{ doctor.licenseNumber }}
+                  </td>
+                  <td
+                    class="specialty-cell"
+                  >
+                    {{ doctor.specialty }}
+                  </td>
+                  <td
+                    class="address-city-state-cell"
+                  >
+                    {{ doctor.addressCityState }}
                   </td>
                 </tr>
               </template>
