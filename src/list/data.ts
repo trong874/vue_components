@@ -345,24 +345,14 @@ const columnsFacility: FacilityColumn[] = [
 
 const races:Race[] = [
   {
-    title: "item 1",
+    title: "White Please Select",
     value: "1",
-    key: "001"
+    key: "01"
   },
   {
-    title: "item 2",
+    title: "Black Please Select",
     value: "2",
-    key: "002"
-  },
-  {
-    title: "item 3",
-    value: "3",
-    key: "003"
-  },
-  {
-    title: "item 4",
-    value: "4",
-    key: "004"
+    key: "02"
   },
 ]
 

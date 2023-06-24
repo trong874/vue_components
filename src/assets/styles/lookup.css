@@ -362,6 +362,10 @@ color: rgb(var(--v-theme-on_green));
     min-width: 60%;
 }
 
+.resize-on-hover .v-field.v-field--dirty.v-field--active:hover .v-field__append-inner {
+    display: none;
+}
+
 
 
 
