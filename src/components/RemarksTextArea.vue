@@ -11,6 +11,7 @@
               rows="4"
               color="on_green"
               v-model="text"
+              :maxlength="4000"
             />
           </v-responsive>
       </v-col>
