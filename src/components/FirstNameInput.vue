@@ -11,6 +11,7 @@
                 variant="outlined"
                 color="on_green"
                 placeholder="Please Input"
+                class="field-with-green-place-holder"
                 :rules="firstNameRule"
                 :maxlength="40"
                 v-model="text"

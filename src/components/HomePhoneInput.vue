@@ -14,6 +14,7 @@
                 :rules="phoneNumberRule"
                 :maxlength="40"
                 v-model="text"
+                class="field-with-green-place-holder"
               />
             </v-responsive>
         </v-col>

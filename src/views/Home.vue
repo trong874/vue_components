@@ -6,8 +6,11 @@
     <AgentLookup />
     <RaceSelect />
     <ClassSuffixSelect />
-    <RemarksTextArea />
+    <Pathologic />
+    <PhysicalExam />
     <XrayScanTextArea />
+    <Scopes />
+    <LabTests />
     <FirstNameInput />
     <HomePhoneInput />
   </section>
@@ -20,8 +23,12 @@ import DoctorLookup from "@/components/DoctorLookup.vue";
 import FacilityLockup from "@/components/FacilityLookup.vue";
 import FirstNameInput from "@/components/FirstNameInput.vue";
 import HomePhoneInput from "@/components/HomePhoneInput.vue";
+import LabTests from "@/components/LabTests.vue";
 import OWALookup from "@/components/OWALookup.vue";
+import Pathologic from "@/components/Pathologic.vue";
+import PhysicalExam from "@/components/PhysicalExam.vue";
 import RaceSelect from "@/components/RaceSelect.vue";
 import RemarksTextArea from "@/components/RemarksTextArea.vue";
+import Scopes from "@/components/Scopes.vue";
 import XrayScanTextArea from "@/components/XrayScanTextArea.vue";
 </script>

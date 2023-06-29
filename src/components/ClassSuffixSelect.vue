@@ -4,8 +4,8 @@
       Class suffix
     </v-label>
     <v-row>
-      <v-col>
-        <v-responsive class="resize-on-hover">
+      <v-col class="class-suffix-wrapper">
+        <div class="resize-on-hover">
           <v-autocomplete
             single-line
             variant="outlined"
@@ -15,7 +15,20 @@
             append-inner-icon="mdi-chevron-down"
             :items="classSuffixs"
           />
-        </v-responsive>
+        </div>
+      </v-col>
+      <v-col class="class-suffix-wrapper">
+        <div class="resize-on-hover">
+          <v-autocomplete
+            single-line
+            variant="outlined"
+            color="on_green"
+            placeholder="Please Select"
+            class="field-with-green-icon" 
+            append-inner-icon="mdi-chevron-down"
+            :items="classSuffixs"
+          />
+        </div>
       </v-col>
     </v-row>
   </v-container>

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-label class="lookup-label">
-      Xray/Scan
+      Scopes ({{ text.length || 0 }}/4000)
     </v-label>
     <v-row>
       <v-col>

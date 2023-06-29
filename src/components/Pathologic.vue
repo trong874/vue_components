@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-label class="lookup-label">
-      Remark ({{ text.length || 0 }}/4000)
+      Input Pathologic ({{ text.length || 0 }}/4000)
     </v-label>
     <v-row>
       <v-col>
@@ -12,6 +12,8 @@
               color="on_green"
               v-model="text"
               :maxlength="4000"
+              placeholder="Please Input"
+              class="field-with-green-place-holder"
             />
           </v-responsive>
       </v-col>
