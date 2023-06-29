@@ -3,8 +3,8 @@
     <v-label class="lookup-label">
       Class suffix
     </v-label>
-    <v-row>
-      <v-col class="class-suffix-wrapper">
+    <v-row class="class-suffix-wrapper">
+      <v-col class="class-suffix-left">
         <div class="resize-on-hover">
           <v-autocomplete
             single-line
@@ -17,7 +17,7 @@
           />
         </div>
       </v-col>
-      <v-col class="class-suffix-wrapper">
+      <v-col class="class-suffix-right">
         <div class="resize-on-hover">
           <v-autocomplete
             single-line

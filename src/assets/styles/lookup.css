@@ -361,33 +361,40 @@
 
 .class-suffix-wrapper {
     position: relative;
-    width: 50%;
     height: 60px;
 }
 
 .resize-on-hover {
-    /* width: fit-content; */
-    width: 80%;
-    position: absolute;
-    overflow: visible;
+    width: 100%;
+    /* width: 80%; */
+    /* position: absolute;
+    overflow: visible; */
 }
 
 .resize-on-hover .v-field {
-    width: 100%;
-    /* max-width: 100%;
-    min-width: 100%; */
+    width: 50%;
+    max-width: 50%;
     background-color: white;
 }
 
 .resize-on-hover .v-field.v-field--dirty.v-field--active:hover {
-    width: 100%;
-    max-width: 800px;
-    min-width: 800px;
+    width: fit-content;
+    max-width: fit-content;
+    min-width: 50%;
     z-index: 1;
 }
 
 .resize-on-hover .v-field.v-field--dirty.v-field--active:hover .v-field__append-inner {
     display: none;
+}
+
+.class-suffix-left {
+    position: relative;
+}
+
+.class-suffix-right {
+    position: absolute;
+    left: 50%;
 }
 
 
