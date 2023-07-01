@@ -13,6 +13,13 @@
     <LabTests />
     <FirstNameInput />
     <HomePhoneInput />
+
+    <NumberInput
+      label="Age at DX"
+      placeholder="Your Age..."
+      :max="100"
+      :min="2"
+    />
   </section>
 </template>
 
@@ -31,4 +38,5 @@ import RaceSelect from "@/components/RaceSelect.vue";
 import RemarksTextArea from "@/components/RemarksTextArea.vue";
 import Scopes from "@/components/Scopes.vue";
 import XrayScanTextArea from "@/components/XrayScanTextArea.vue";
+import NumberInput from "@/components/NumberInput.vue";
 </script>
