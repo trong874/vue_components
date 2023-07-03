@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :style="{paddingBottom: '44px'}">
     <FacilityLockup />
     <OWALookup />
     <DoctorLookup />
@@ -20,6 +20,8 @@
       :max="100"
       :min="2"
     />
+
+    <ClassSuffixInputNumber />
   </section>
 </template>
 
@@ -39,4 +41,5 @@ import RaceSelect from "@/components/RaceSelect.vue";
 import Scopes from "@/components/Scopes.vue";
 import XrayScanTextArea from "@/components/XrayScanTextArea.vue";
 import NumberInput from "@/components/NumberInput.vue";
+import ClassSuffixInputNumber from "@/components/ClassSuffixInputNumber.vue";
 </script>
