@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-label class="lookup-label">
-      Class suffix
+      Integer component
     </v-label>
     <v-row class="class-suffix-wrapper">
       <v-col class="class-suffix-left">
