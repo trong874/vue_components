@@ -6,6 +6,7 @@
     <AgentLookup />
     <RaceSelect />
     <ClassSuffixSelect />
+    <ClassSuffixInputNumber />
     <Pathologic />
     <PhysicalExam />
     <XrayScanTextArea />
@@ -21,7 +22,6 @@
       :min="2"
     />
 
-    <ClassSuffixInputNumber />
   </section>
 </template>
 
